@@ -601,7 +601,7 @@ function makeMbTiles() {
     fs.writeSync(fd, metajson);
     fs.closeSync(fd);
 
-    let mbtiles = `${dbfolder}/${chartname}.db`;
+    let mbtiles = `${dbfolder}/${chartname}.${settings.dbextension}`;
     fs.rmSync(mbtiles, { force: true });  
     
     logEntry(`>> creating database: ${mbtiles}`);
